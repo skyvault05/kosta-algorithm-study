@@ -10,7 +10,7 @@ public class ex0326 {
 	        int answer = 0;
 	        int ll = lost.length;
 	        int rl = reserve.length;
-	        for(int i=0; i<rl; i++){//자기가 잃어버리고 가져온 애들 지움 lost->100 reserve->200
+	        for(int i=0; i<rl; i++){
 	            for(int j=0; j<ll ;j++){
 	            	if(lost[j]==reserve[i]) {
 	            		lost[j]=100;
@@ -21,7 +21,7 @@ public class ex0326 {
 	            	
 	            }
 	        }
-	        for(int i=0; i<rl; i++){//이제 빌려줌-앞번호부터 받은애들 100
+	        for(int i=0; i<rl; i++){
 	            for(int j=0; j<ll ;j++){
 	            	if(lost[j]==reserve[i]-1) {
 	            		lost[j]=100;
