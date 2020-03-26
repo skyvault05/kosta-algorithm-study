@@ -5,6 +5,8 @@ import java.util.List;
 
 public class ex0326 {
 	    public static int solution(int n, int[] lost, int[] reserve) {
+	    	
+	    	
 	        int answer = 0;
 	        int ll = lost.length;
 	        int rl = reserve.length;
@@ -32,7 +34,7 @@ public class ex0326 {
 	            	}
 	            }
 	        }
-	        answer=n-(ll-answer);
+	        answer=n-(ll-answer); //총인원-(잃어버린수 - 빌려준수)
 	        System.out.println(answer);
 	        return answer;
 	    }
