@@ -64,7 +64,7 @@ public class ex0326 {
 </details>
 
 ## collapsible markdown?
-
+<details>
 <summary>CLICK ME</summary>
 
 <p>
@@ -74,6 +74,5 @@ public class ex0326 {
 print("hello world!")
 ```
 </p>
-
-
+</details>
 
