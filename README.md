@@ -2,6 +2,19 @@
 algorithm study
 
 ##3월27일 체육복 빌려주기
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
+
 <detail><summary>코드보기</summary>
 	
 <p>
