@@ -1,11 +1,16 @@
 # Kosta 알고리즘 스터디
 
 #### 3월27일 체육복 빌려주기
+배열 그대로 비교하는걸 전제로 함.
+체격 비교할때 앞번호 뒷번호만 비교하므로 예비로 가져온 학생 +1, -1만비교
+첫번째 루프: reserve로 lost를 비교하여 같은 값이 있으면 lost엔 100 reserve엔 200으로 쓰레기 값을 넣음. 
+	  (비교시 +1, -1로 비교하므로 만날수없음, 문제 내 최대 인원수도 넘어섬.)
+두번째 루프: reserve로 lost를 하나씩 비교하며 reserve보다 번호가 1작은 빌려주고 answer++, 루프 빠져나옴(break)
 
+answer = 총인원-(잃어버린수 - 빌려준수)
 <details><summary>코드보기</summary>
 	
-<p>
-구현코드:
+https://programmers.co.kr/learn/courses/30/lessons/42862
 	
 ```java
 public class ex0326 {
@@ -59,19 +64,7 @@ public class ex0326 {
 
 }
  ```
-</p>
-
-</details>
-
-## collapsible markdown?
-<details>
-<summary>CLICK ME</summary>
-
-#### yes, even hidden code blocks!
-
-```python
-print("hello world!")
-```
-</details>
-
-test1
+ 
+ </details>
+ 
+ 예제는 https://programmers.co.kr/ 의 문제를 사용하였습니다. 예제의 저작권은 (주)그랩에 있습니다
