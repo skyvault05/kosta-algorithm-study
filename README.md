@@ -1,5 +1,6 @@
 # Kosta 알고리즘 스터디
 
+https://programmers.co.kr/learn/courses/30/lessons/42862
 #### 3월27일 체육복 빌려주기
 <pre>
 배열 그대로 비교하는걸 전제로 함.
@@ -12,7 +13,7 @@ answer = 총인원-(잃어버린수 - 빌려준수)
 </pre>
 <details><summary>코드보기</summary>
 	
-https://programmers.co.kr/learn/courses/30/lessons/42862
+
 	
 ```java
 public class ex0326 {
