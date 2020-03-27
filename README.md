@@ -1,5 +1,4 @@
 # kosta-algorithm-study
-algorithm study
 
 #### 3월27일 체육복 빌려주기
 
