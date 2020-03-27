@@ -3,13 +3,11 @@ algorithm study
 
 ##3월27일 체육복 빌려주기
 <detail>
-<summary>코드</summary>
-<p>
-  ```java
+<summary>코드보기</summary>
+	
+```java
 public class ex0326 {
-	    public static int solution(int n, int[] lost, int[] reserve) {
-	    	
-	    	
+	    public static int solution(int n, int[] lost, int[] reserve) {  		    	
 	        int answer = 0;
 	        int ll = lost.length;
 	        int rl = reserve.length;
@@ -20,8 +18,7 @@ public class ex0326 {
 	            		reserve[i]=200;
 	            		answer++;
 	            		break;
-	            	}
-	            	
+	            	}	            	
 	            }
 	        }
 	        for(int i=0; i<rl; i++){//이제 빌려줌-앞번호부터 받은애들 100
@@ -41,8 +38,6 @@ public class ex0326 {
 	        System.out.println(answer);
 	        return answer;
 	    }
-	
-
 	public static void main(String[] args) {
 		int n1 = 5;
 		int n2 = 5;
@@ -61,7 +56,7 @@ public class ex0326 {
 	}
 
 }
-  ```
+ ```
 </p>
 
 </detail>
