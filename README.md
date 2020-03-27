@@ -65,8 +65,8 @@ public class ex0326 {
 
 ## collapsible markdown?
 
-<details><summary>CLICK ME</summary>
-<p>
+<summary>CLICK ME</summary>
+
 
 #### yes, even hidden code blocks!
 
@@ -74,5 +74,5 @@ public class ex0326 {
 print("hello world!")
 ```
 
-</p>
-</details>
+
+
