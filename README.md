@@ -4,6 +4,7 @@ algorithm study
 ##3월27일 체육복 빌려주기
 <detail>
   <summary>코드</summary>
+<p>
   ```java
   package algorithm_study;
 
@@ -65,6 +66,7 @@ public class ex0326 {
 	}
 
 }
-  ```
+  /```
+</p>
 
 </detail>
