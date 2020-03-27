@@ -12,7 +12,7 @@ https://programmers.co.kr/learn/courses/30/lessons/42862
 
 answer = 총인원-(잃어버린수 - 빌려준수)
 </pre>
-<details><summary>--코드보기</summary>
+<details><summary>[코드보기]</summary>
 	
 
 	
