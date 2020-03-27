@@ -6,10 +6,6 @@ algorithm study
 <summary>코드</summary>
 <p>
   ```java
-
-import java.util.Arrays;
-import java.util.List;
-
 public class ex0326 {
 	    public static int solution(int n, int[] lost, int[] reserve) {
 	    	
