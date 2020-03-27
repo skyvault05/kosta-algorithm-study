@@ -4,7 +4,9 @@ algorithm study
 ##3월27일 체육복 빌려주기
 <detail><summary>코드보기</summary>
 	
+<p>
 구현코드:
+	
 ```java
 public class ex0326 {
 	    public static int solution(int n, int[] lost, int[] reserve) {  		    	
