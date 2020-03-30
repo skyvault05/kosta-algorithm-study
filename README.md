@@ -1,7 +1,7 @@
 # Kosta 알고리즘 스터디
 
 
-## 3월27일 체육복 빌려주기
+## 체육복 빌려주기
 https://programmers.co.kr/learn/courses/30/lessons/42862
 <pre>
 배열 그대로 비교하는걸 전제로 함.
