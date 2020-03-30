@@ -121,8 +121,6 @@ public static int solution2(int n) {
 			  ArrayList<Boolean> primeList = new ArrayList<Boolean>(n+1);
 			  primeList.add(false);
 			  primeList.add(false);
-			  for(int i=2; i<=n; i++ )
-					primeList.add(i, true);
 			  
 			// 2 부터  ~ i*i <= n
 				// 각각의 배수들을 지워간다.
