@@ -1,0 +1,53 @@
+package algorithm_study;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class ex0330 {
+	
+	static class Solution {		  
+		  public static int solution(int n) {
+			  int answer = 1;
+		      int flag = 0;
+		      List<Integer> list = new ArrayList<>();
+		      list.add(2);
+		      for(int i=2; i<=n; i++){		            
+		            for(int num : list) {
+		            	if(i%num == 0) {
+		            		flag++;
+		            		break;
+		            	}
+		            }
+		            if(flag==0) {
+	            		answer++;
+	            		list.add(i);
+	            	} else {
+	            		flag=0;
+	            	}
+		            
+		      }
+		      for(int a : list) {
+		    	  System.out.print(a+" ");
+		      }
+		      return answer;
+		      //java.util.ConcurrentModificationException 도중에 list인덱스와 사이즈값이 변함
+		  }
+		  
+		  public static int solution2(int n) {
+			  int answer=0;
+			  ArrayList<Boolean> primeList = new ArrayList<Boolean>(n+1);
+			  primeList.add(true);
+			  primeList.add(true);
+			  
+			  return answer;
+		  }
+	}
+
+
+	public static void main(String[] args) {
+		Solution.solution(200);
+		Solution.solution2(200);
+	}
+
+}
