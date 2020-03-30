@@ -71,4 +71,79 @@ public class ex0326 {
  
  </details>
  
+ ## 소수(Prime Number) 찾기
+https://programmers.co.kr/learn/courses/30/lessons/12921
+<pre>
+1. 각 번호를 소수로 나누고 소수이면 추가.
+</pre>
+<details><summary>[코드보기]</summary>
+	
+
+	
+```java
+int answer = 1;
+		      int flag = 0;
+		      List<Integer> list = new ArrayList<>();
+		      list.add(2);
+		      for(int i=2; i<=n; i++){		            
+		            for(int num : list) {
+		            	if(i%num == 0) {
+		            		flag++;
+		            		break;
+		            	}
+		            }
+		            if(flag==0) {
+	            		answer++;
+	            		list.add(i);
+	            	} else {
+	            		flag=0;
+	            	}
+		            
+		      }
+		      return answer;
+		      //java.util.ConcurrentModificationException 도중에 list인덱스와 사이즈값이 변함
+		  }
+ ```
+ 
+ </details>
+ 
+ <pre>
+2.에라토스테네스의 체 방식으로 풀기
+  boolean배열로 각 숫자 표현함.
+</pre>
+<details><summary>[코드보기]</summary>
+	
+
+	
+```java
+public static int solution2(int n) {
+			  int answer=0;
+			  ArrayList<Boolean> primeList = new ArrayList<Boolean>(n+1);
+			  primeList.add(false);
+			  primeList.add(false);
+			  for(int i=2; i<=n; i++ )
+					primeList.add(i, true);
+			  
+			// 2 부터  ~ i*i <= n
+				// 각각의 배수들을 지워간다.
+				for(int i=2; (i*i)<=n; i++){
+					if(primeList.get(i)){
+						for(int j = i*2; j<=n; j+=i) primeList.set(j, false);
+						//i*i 미만은 이미 처리되었으므로 j의 시작값은 i*i로 최적화할 수 있다.
+					}
+				}
+				
+				for(boolean b : primeList) {
+					if(b) {
+						answer++;
+					}
+				}
+				
+			  
+			 return answer;
+		  }
+ ```
+ 
+ </details>
+ 
  예제는 https://programmers.co.kr/ 의 문제를 사용하였습니다. 예제의 저작권은 (주)그랩에 있습니다
