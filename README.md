@@ -146,7 +146,7 @@ public static int solution2(int n) {
  
  ## 수박수박수박수....
  <pre>
- char배열을 만들어서 홀수엔 '박' 짝수엔 '수'넣어서 String Constructor로 String 만들어 반환
+ char배열을 만들어서 홀수엔 '수' 짝수엔 '박'넣어서 String Constructor로 String 만들어 반환
  </pre>
  <details><summary>코드보기</summary>
 	
