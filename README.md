@@ -149,6 +149,7 @@ public static int solution2(int n) {
  char배열을 만들어서 홀수엔 '박' 짝수엔 '수'넣어서 String Constructor로 String 만들어 반환
  </pre>
  <details><summary>코드보기</summary>
+	
  ```java
  class Solution {
 		  public String solution(int n) {
@@ -164,5 +165,6 @@ public static int solution2(int n) {
 		  }
 	}
  ```
+ 
  </details>
  예제는 https://programmers.co.kr/ 의 문제를 사용하였습니다. 예제의 저작권은 (주)그랩에 있습니다
