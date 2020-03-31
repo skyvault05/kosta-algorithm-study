@@ -1,0 +1,17 @@
+package algorithm_study;
+
+public class SimpleTest {
+
+	public static void main(String[] args) {
+		String str = "수";
+		char c1 = '수';
+		char c2 = '박';
+		
+		byte bt1 = (byte)c1;
+		byte bt2 = (byte)c2;
+		System.out.println(bt1+":"+bt2+":"+(bt1+bt2));
+		
+		
+	}
+
+}

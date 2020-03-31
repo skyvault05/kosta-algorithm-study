@@ -1,0 +1,9 @@
+package algorithm_study;
+
+public class SimpleTest {
+
+	public static void main(String[] args) {
+		String str = "dd";
+	}
+
+}

@@ -26,9 +26,6 @@ public class ex0330 {
 	            	}
 		            
 		      }
-//		      for(int a : list) {
-//		    	  System.out.print(a+" ");
-//		      }
 		      return answer;
 		      //java.util.ConcurrentModificationException 도중에 list인덱스와 사이즈값이 변함
 		  }
