@@ -154,7 +154,6 @@ public static int solution2(int n) {
  class Solution {
 		  public String solution(int n) {
 			  char[] cr = new char[n];
-			  System.out.println(cr[0]);
 		      for(int i=0; i<n; i+=2){
 		          cr[i]='수';
 		      }
