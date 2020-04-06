@@ -166,4 +166,26 @@ public static int solution2(int n) {
  ```
  
  </details>
+ 
+ ```java
+ 
+ public int[] solution(int N, int[] stages) {
+        int[] answer = new int[N];
+        Map<Integer, Integer> map = new HashMap();
+        int val = 0;
+        for(int i=1; i<=stages.length; i++){
+        	if(map.get(stages[i-1])==null) {
+        		val = 1;
+        	} else {
+        		val = map.get(stages[i-1])+1;
+        	}
+        	
+            map.put(stages[i-1], val);
+        }
+        List sorted =
+        	    map.entrySet().stream()
+        	       .sorted(Map.Entry.comparingByValue()).collect(Collectors.toList());
+        return answer;
+    }
+ ```
  예제는 https://programmers.co.kr/ 의 문제를 사용하였습니다. 예제의 저작권은 (주)그랩에 있습니다
