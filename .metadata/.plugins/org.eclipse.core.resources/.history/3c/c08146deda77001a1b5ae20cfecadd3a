@@ -1,0 +1,36 @@
+package algorithm_study.ex0406;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution {
+	public int[] solution(int N, int[] stages) {
+        int[] answer = {};
+        Map<Integer, Integer> hash = new HashMap();
+        int val = 0;
+        for(int i=1; i<=N; i++){
+        	if(hash.get(stages[i-1])==null) {
+        		val = 1;
+        	} else {
+        		val = hash.get(stages[i-1])+1;
+        	}
+        			
+            hash.put(stages[i-1], val);
+        }
+        for(int aa : stages) {
+        	System.out.println(aa);
+        }
+        for(int aa : hash.keySet()) {
+        	
+        	System.out.println(aa);
+        }
+        return answer;
+    }
+
+	public static void main(String[] args) {
+		Solution s = new Solution();
+		int[] i1 = {2, 1, 2, 6, 2, 4, 3, 3};
+		s.solution(5, i1);
+	}
+
+}
