@@ -167,25 +167,41 @@ public static int solution2(int n) {
  
  </details>
  
- ```java
+ ## 시저 암호
+ <pre>
+ 1. 알파벳을 char 배열로 만들어서 뽑아쓰기 위해 생성해둠
+ 2. 받은 스트링을 String.charAt()메소드로 각각 비교하면서 변환.
+    해석된 문자의 순번 = 받은문자 - (a or A) + N % 26
+ 3. 문자의 순번을 index로 lower나 upper배열에서 참조해 answerArr 배열에 하나하나 담음.
+ 4. String Constructor에 answerArr을 매개변수로 String을 생성후 리턴.
  
- public int[] solution(int N, int[] stages) {
-        int[] answer = new int[N];
-        Map<Integer, Integer> map = new HashMap();
-        int val = 0;
-        for(int i=1; i<=stages.length; i++){
-        	if(map.get(stages[i-1])==null) {
-        		val = 1;
-        	} else {
-        		val = map.get(stages[i-1])+1;
-        	}
-        	
-            map.put(stages[i-1], val);
-        }
-        List sorted =
-        	    map.entrySet().stream()
-        	       .sorted(Map.Entry.comparingByValue()).collect(Collectors.toList());
-        return answer;
-    }
+ </pre>
+ <details><summary>코드보기</summary>
+	
+ ```java
+ class Solution {
+		  public String solution(String s, int n) {
+	      char[] answerArr = new char[s.length()];
+	      char[] lower = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+	      char[] upper = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+	      for(int i=0;i<s.length();i++) {
+	    	  if(s.charAt(i) == ' ') {
+	    		  answerArr[i] = ' ';
+	    	  }
+	    	  else if(s.charAt(i) < 97) {
+	    		  int temp = (int) ((s.charAt(i)+n-65)%26);
+	    		  answerArr[i]=upper[temp];
+	    	  }
+	    	  else if(s.charAt(i) >= 97) {
+	    		  int temp = (int) ((s.charAt(i)+n-97)%26);
+	    		  answerArr[i]=lower[temp];
+	    	  }
+	      }
+	      return new String(answerArr);
+	  }
+	}
  ```
+ 
+ </details>
+
  예제는 https://programmers.co.kr/ 의 문제를 사용하였습니다. 예제의 저작권은 (주)그랩에 있습니다
