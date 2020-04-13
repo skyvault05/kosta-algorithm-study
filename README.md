@@ -223,17 +223,13 @@ class Solution {
         	for(int j=0; j<N; j++) {
         		if(board[j][i]!=0) {
         			container[counter]=board[j][i];
-        			System.out.println(counter);
         			counter++;
-        			System.out.println(counter);
         			break;
         		}
         	}
         	int before = (counter-2 < 0) ? -20 : container[counter-2];
 			if(container[counter-1] == before) {
-				System.out.println(counter);
 				counter--;
-				System.out.println(counter);
 				answer++;
 			}
 			
