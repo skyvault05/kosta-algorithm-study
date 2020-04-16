@@ -204,52 +204,35 @@ public static int solution2(int n) {
  
  </details>
  
- ## 크레인
+ ## 주식가격
+ <pre>
+ 1. prices에서 0번을 1번부터 끝까지 비교하다 하한가 치면 빠져나옴
+ 2. 이를 i값을 i+1값부터 끝까지 비교하다가 하한가 치면 빠져나오게 코드를 작성
+ 3.이렇게 하면 마지막값은 비교를 안하지만 항상 0이므로 0으로 넣어주고 answer 리턴.
  
+ </pre>
+ <details><summary>코드보기</summary>
+	
  ```java
- 
- package algorithm_study.ex0413;
-
-class Solution {
-    public int solution(int[][] board, int[] moves) {
-        int answer = 0;
-        int counter = 0;
-        int[] container = new int[moves.length];
-        int N = board.length;
+ class Solution {
+    public int[] solution(int[] prices) {
+    	int len = prices.length;
+        int[] answer = new int[len];
         
-        for(int i : moves) {
-        	i--;
-        	
-        	for(int j=0; j<N; j++) {
-        		if(board[j][i]!=0) {
-        			container[counter]=board[j][i];
-        			counter++;
-        			break;
-        		}
-        	}
-        	int before = (counter-2 < 0) ? -20 : container[counter-2];
-			if(container[counter-1] == before) {
-				counter--;
-				answer++;
-			}
-			
-        	
-        	
-        	
+        for(int i=0;i<len-1; i++){
+            for(int j=i+1; j<len; j++){
+                answer[i]++;
+                if(prices[i]>prices[j]) {
+                	break;
+                }
+            }
         }
-        System.out.println("ans:"+answer);
+        answer[len-1]=0;
         return answer;
     }
-    
-    public static void main(String[] args) {
-		Solution s = new Solution();
-		int board[][] = {{0,0,0,0,0},{0,0,1,0,3},{0,2,5,0,1},{4,2,4,4,2},{3,5,1,3,1}};
-		int[] moves = {1,5,3,5,1,2,1,4};
-		s.solution(board, moves);
-	}
-}
-
- 
  ```
+ 
+ </details>
+
 
  예제는 https://programmers.co.kr/ 의 문제를 사용하였습니다. 예제의 저작권은 (주)그랩에 있습니다
