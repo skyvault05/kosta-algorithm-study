@@ -1,0 +1,38 @@
+package algorithm_study.ex0420;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+	
+	public static List prime(int n) {
+		  List<Boolean> primeList = new ArrayList<Boolean>(n+1);
+		  primeList.add(false);
+		  primeList.add(false);
+		  for(int i=2; i<=n; i++ )
+				primeList.add(i, true);
+		  
+		// 2 부터  ~ i*i <= n
+			// 각각의 배수들을 지워간다.
+			for(int i=2; (i*i)<=n; i++){
+				if(primeList.get(i)){
+					for(int j = i*2; j<=n; j+=i) primeList.set(j, false);
+					//i*i 미만은 이미 처리되었으므로 j의 시작값은 i*i로 최적화할 수 있다.
+				}
+			}
+			
+		  
+		 return primeList;
+	  }
+	public static int solution(String numbers) {
+		
+		
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
